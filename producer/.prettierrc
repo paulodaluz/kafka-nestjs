@@ -1,4 +1,11 @@
 {
   "singleQuote": true,
-  "trailingComma": "all"
+  "printWidth": 100,
+  "trailingComma": "all",
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "crlf"
+    }
+  ]
 }
