@@ -1,11 +1,5 @@
 import { Controller } from '@nestjs/common';
-import {
-  Client,
-  ClientKafka,
-  MessagePattern,
-  Payload,
-  Transport,
-} from '@nestjs/microservices';
+import { MessagePattern, Payload } from '@nestjs/microservices';
 import { AppService } from './app.service';
 
 @Controller()

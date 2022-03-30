@@ -4,7 +4,6 @@ const { Kafka } = require('kafkajs');
 
 @Injectable()
 export class AppService {
-  constructor() {}
   async getHello() {
     const kafka = new Kafka({
       clientId: 'chat-of-messages',
