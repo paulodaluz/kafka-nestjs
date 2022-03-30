@@ -23,7 +23,17 @@ Para startar o projeto você pode digitar o comando `npm run start:dev` ou `yarn
 
 Após isso ele irá startar o projeto na porta 3000(no caso do producer) e o consumer irá monitorar a porta 9092 no seu localhost.
 
+Para efetuar a comunicação entre o producer e o consumer você deverá importar o seguinte curl no Postman:
+ 
+``` bash
+curl --location --request POST 'localhost:3000/producer/v1/send-message' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "message": "Está mensagem deve aparecer no consumer"
+}'
+```
 
+Após executar o curl acima, você irá notar no console do consumer, que será exibida a mensagem acima enviada ao producer.
 
 ## 📜 Licença
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/paulodaluz/kafka-nestjs/blob/main/LICENSE) para mais detalhes.
